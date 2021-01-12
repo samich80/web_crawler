@@ -66,6 +66,10 @@ ROBOTSTXT_OBEY = True
 #    'web_crawler.pipelines.WebCrawlerPipeline': 300,
 #}
 
+ITEM_PIPELINES = {
+    'web_crawler.pipelines.BravebirdPipeline': 300
+}
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
