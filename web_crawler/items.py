@@ -5,13 +5,8 @@
 
 import scrapy
 
-
-class WebCrawlerItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
-
+#описание получаемых данных от "паука"
 class BravebirdItem(scrapy.item):
-    title = scrapy.Field()
-    date = scrapy.Field()
-    time = scrapy.Field()
+    title = scrapy.Field()  #поле темы
+    date = scrapy.Field()   #поле даты
+    time = scrapy.Field()   #поле времени
