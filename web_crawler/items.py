@@ -8,5 +8,8 @@ import scrapy
 #описание получаемых данных от "паука"
 class BravebirdItem(scrapy.item):
     title = scrapy.Field()  #поле темы
-    date = scrapy.Field()   #поле даты
-    time = scrapy.Field()   #поле времени
+    published_date = scrapy.Field()   #поле даты
+    updated_date = scrapy.Field()
+    comments = scrapy.Field()
+    post_location = scrapy.Field()
+    

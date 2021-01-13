@@ -25,6 +25,8 @@ class BravebirdSpider(CrawlSpider):
         for i in response.xpath(SET_SELECTOR):
             yield {
                 'title': " ".join(i.xpath('./h1//text()').extract()),  #селектор для темы
-                'date': i.xpath('./div/span/time/text()').extract()[0],#селектор для даты
-                'time': i.xpath('./div/span/time/text()').extract()[1],#селектор для времени
+                'published_date': i.xpath('./div[@class="entry-meta entry-meta-single"]/span[@class="post-info post-info-date"]/time[@class="entry-date published"]/text()').get(),   #селектор для даты
+                'updated_date': i.xpath('./div[@class="entry-meta entry-meta-single"]/span[@class="post-info post-info-date"]/time[@class="updated"]/text()').get(),
+                'comments': i.xpath('./div[@class="entry-meta entry-meta-single"]/span[@class="post-info post-info-comment"]/a/text()').get(),
+                'post_location': i.xpath('./div[@class="entry-meta entry-meta-single"]/span[@class="post-info post-info-location"]/text()').getall(),
             }    
