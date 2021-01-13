@@ -37,6 +37,7 @@ class BravebirdPipeline:
         #line = json.dumps(ItemAdapter(item).asdict()) + "\n"
         #self.file.write(line)
         ItemData = ItemAdapter(item).asdict()
-        ItemData.update({'scantime': DateTime})
-        self.CrawlerData.insert_one(ItemData)
+        self.CrawlerData.find(ItemData).limit(1).count() == 0:
+            ItemData.update({'scantime': DateTime})
+            self.CrawlerData.insert_one(ItemData)
         return item
