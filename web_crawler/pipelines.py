@@ -26,11 +26,13 @@ class BravebirdPipeline:
     def open_spider(self, spider):
         #self.file = open('items.jl', 'w')
         self.CrawlerData = db.CrawlerData
+        self.NewItems = 0
+        self.TotalItems = 0
 
-     #определяем, что при закрытии паука, закрываем файл items.jl
+    #определяем, что при закрытии паука, закрываем файл items.jl
     def close_spider(self, spider):
         #self.file.close()
-        pass
+        print('Total items: %d  New Items: %d' % (self.TotalItems, self.NewItems))
 
     #определяем, что при каждом получении строки из паука, записываем в открытый файл в формате json
     def process_item(self, item, spider):
@@ -40,4 +42,6 @@ class BravebirdPipeline:
         if self.CrawlerData.find(ItemData).count() == 0:
             ItemData.update({'scantime': DateTime})
             self.CrawlerData.insert_one(ItemData)
+            self.NewItems += 1
+        self.TotalItems += 1
         return item

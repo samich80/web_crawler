@@ -18,7 +18,15 @@ Execution:
 
 scrapy crawl bravebird (or scrapy crawl bravebird --loglevel="ERROR" - for less output) in project root directory
 
-Result in items.jl
-
 TODO:
 2. site URL for scraping to settings.py
+
+
+TIPs.
+1. Remove all collections in MongoDB:
+from pymongo import MongoClient
+client = MongoClient()
+client = MongoClient('mongodb://localhost:27017')
+db = client['webCrawler']
+CrawlerData = db.CrawlerData
+CrawlerData.delete_many({})
