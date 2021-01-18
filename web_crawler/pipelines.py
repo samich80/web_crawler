@@ -38,6 +38,8 @@ class BravebirdPipeline:
     def process_item(self, item, spider):
         #line = json.dumps(ItemAdapter(item).asdict()) + "\n"
         #self.file.write(line)
+        #print (item)
+        #print(item['comments_words_count'],' ',item['comments'])
         ItemData = ItemAdapter(item).asdict()
         if self.CrawlerData.find(ItemData).count() == 0:
             ItemData.update({'scantime': DateTime})

@@ -12,4 +12,5 @@ class BravebirdItem(scrapy.item):
     updated_date = scrapy.Field()
     comments = scrapy.Field()
     post_location = scrapy.Field()
-    
+    words_count = scrapy.Field()
+    #comments_words_count = scrapy.Field()
