@@ -1,0 +1,31 @@
+<div class="mb-3">
+    <ul class="nav nav-tabs" id="articlesCountTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="countByDate-tab" data-bs-toggle="tab" href="#countByDate" role="tab"
+               aria-controls="countByDate" aria-selected="true">Date</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="countByMonth-tab" data-bs-toggle="tab" href="#countByMonth" role="tab"
+               aria-controls="countByMonth" aria-selected="false">Month</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="countByYear-tab" data-bs-toggle="tab" href="#countByYear" role="tab"
+               aria-controls="countByYear" aria-selected="false">Year</a>
+        </li>
+    </ul>
+</div>
+
+<div class="tab-content" id="articlesCountTabContent">
+    <div class="tab-pane fade show active" id="countByDate" role="tabpanel" aria-labelledby="countByDate-tab">
+        <h2>Article counts by Date</h2>
+        <div id="countByDateChart"></div>
+    </div>
+    <div class="tab-pane fade" id="countByMonth" role="tabpanel" aria-labelledby="countByMonth-tab">
+        <h2>Article counts by Month</h2>
+        <div id="countByMonthChart"></div>
+    </div>
+    <div class="tab-pane fade" id="countByYear" role="tabpanel" aria-labelledby="countByYear-tab">
+        <h2>Article counts by Year</h2>
+        <div id="countByYearChart"></div>
+    </div>
+</div>
