@@ -30,3 +30,9 @@ client = MongoClient('mongodb://localhost:27017')
 db = client['webCrawler']
 CrawlerData = db.CrawlerData
 CrawlerData.delete_many({})
+   
+# Web analytic #
+1. Work directory `front`
+2. Run `npm install`
+3. Run `DEBUG=front:* npm start`
+4. Open http://localhost:3000/
