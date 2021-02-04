@@ -6,6 +6,7 @@ from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 from spiders.bravebird import BravebirdSpider
 import pandas as pd
+import datetime
 
 def db_list():
     client = MongoClient()
@@ -20,8 +21,21 @@ def db_list():
     print(data)
     return
 
+def db_log():
+    now = datetime.datetime.now()
+    DateTime = now.strftime("%d-%m-%Y %H:%M")
+
+    client = MongoClient()
+    client = MongoClient('mongodb://localhost:27017')
+
+    db = client['webCrawler']
+    LogData = db.log
+    LogData.insert_one({'run':DateTime})
+    return
+
 #bravebird
 process = CrawlerProcess(get_project_settings())
 process.crawl('bravebird')
 process.start()
 db_list()
+db_log()
