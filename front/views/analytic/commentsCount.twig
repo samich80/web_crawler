@@ -1,0 +1,39 @@
+<div class="mb-3">
+    <ul class="nav nav-tabs" id="commentsCountTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="comments-countByDate-tab" data-bs-toggle="tab" href="#comments-countByDate" role="tab"
+               aria-controls="comments-countByDate" aria-selected="true">Date</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="comments-countByMonth-tab" data-bs-toggle="tab" href="#comments-countByMonth" role="tab"
+               aria-controls="comments-countByMonth" aria-selected="false">Month</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="comments-countByQuarter-tab" data-bs-toggle="tab" href="#comments-countByQuarter" role="tab"
+               aria-controls="comments-countByQuarter" aria-selected="false">Quarter</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="comments-countByYear-tab" data-bs-toggle="tab" href="#comments-countByYear" role="tab"
+               aria-controls="comments-countByYear" aria-selected="false">Year</a>
+        </li>
+    </ul>
+</div>
+
+<div class="tab-content" id="commentsCountTabContent">
+    <div class="tab-pane fade show active" id="comments-countByDate" role="tabpanel" aria-labelledby="comments-countByDate-tab">
+        <h2>Comments by Date</h2>
+        <div id="comments-countByDateChart"></div>
+    </div>
+    <div class="tab-pane fade" id="comments-countByMonth" role="tabpanel" aria-labelledby="comments-countByMonth-tab">
+        <h2>Comments by Month</h2>
+        <div id="comments-countByMonthChart"></div>
+    </div>
+    <div class="tab-pane fade" id="comments-countByYear" role="tabpanel" aria-labelledby="comments-countByYear-tab">
+        <h2>Comments by Year</h2>
+        <div id="comments-countByYearChart"></div>
+    </div>
+    <div class="tab-pane fade" id="comments-countByQuarter" role="tabpanel" aria-labelledby="comments-countByQuarter-tab">
+        <h2>Comment by Season</h2>
+        <div id="comments-countByQuarterChart"></div>
+    </div>
+</div>
