@@ -1,0 +1,19 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+    <hr>
+    <div id="log">
+        <table id="logTable" class="display">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="/javascripts/log.js"></script>
+{% endblock %}
